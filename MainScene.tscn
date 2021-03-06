@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main.tres" type="Theme" id=1]
+[ext_resource path="res://MainScene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Atkinson-Hyperlegible-Regular-102.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 22
+font_data = SubResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.2
+anchor_right = 0.5
+anchor_bottom = 0.3
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.6
+anchor_right = 0.5
+anchor_bottom = 0.6
+grow_horizontal = 2
+theme = SubResource( 3 )
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ChangeFont" type="Button" parent="HBox"]
+margin_left = 32.0
+margin_right = 87.0
+margin_bottom = 42.0
+text = "Font"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SizeUp" type="Button" parent="HBox"]
+margin_left = 107.0
+margin_right = 146.0
+margin_bottom = 42.0
+text = "Up"
+
+[node name="SizeDown" type="Button" parent="HBox"]
+margin_left = 166.0
+margin_right = 231.0
+margin_bottom = 42.0
+text = "Down"
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Node"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 1 )
+text = "ESBJHFBSJHBFSEJHBEHSBFJESBF"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
